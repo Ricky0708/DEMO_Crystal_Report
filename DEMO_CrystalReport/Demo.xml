@@ -1,0 +1,125 @@
+<?xml version="1.0" standalone="yes"?>
+<DemoCrystalReport>
+  <xs:schema id="DemoCrystalReport" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="DemoCrystalReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="DemoMasterRecord">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="OrderNo" type="xs:string" minOccurs="0" />
+                <xs:element name="CustomeName" type="xs:string" minOccurs="0" />
+                <xs:element name="OrderDate" type="xs:dateTime" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="DemoDetailRecord">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="OrderNo" type="xs:string" minOccurs="0" />
+                <xs:element name="ProductName" type="xs:string" minOccurs="0" />
+                <xs:element name="Quantity" type="xs:int" minOccurs="0" />
+                <xs:element name="Price" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1">
+        <xs:selector xpath=".//DemoMasterRecord" />
+        <xs:field xpath="OrderNo" />
+      </xs:unique>
+      <xs:keyref name="MasterDetail" refer="Constraint1">
+        <xs:selector xpath=".//DemoDetailRecord" />
+        <xs:field xpath="OrderNo" />
+      </xs:keyref>
+    </xs:element>
+  </xs:schema>
+  <DemoMasterRecord>
+    <OrderNo>1</OrderNo>
+    <CustomeName>NorthWindCompony_0</CustomeName>
+    <OrderDate>2016-04-08T00:00:00+08:00</OrderDate>
+  </DemoMasterRecord>
+  <DemoMasterRecord>
+    <OrderNo>2</OrderNo>
+    <CustomeName>NorthWindCompony_1</CustomeName>
+    <OrderDate>2016-04-09T00:00:00+08:00</OrderDate>
+  </DemoMasterRecord>
+  <DemoMasterRecord>
+    <OrderNo>3</OrderNo>
+    <CustomeName>NorthWindCompony_2</CustomeName>
+    <OrderDate>2016-04-10T00:00:00+08:00</OrderDate>
+  </DemoMasterRecord>
+  <DemoDetailRecord>
+    <OrderNo>1</OrderNo>
+    <ProductName>Product_0</ProductName>
+    <Quantity>0</Quantity>
+    <Price>0</Price>
+  </DemoDetailRecord>
+  <DemoDetailRecord>
+    <OrderNo>1</OrderNo>
+    <ProductName>Product_1</ProductName>
+    <Quantity>1</Quantity>
+    <Price>1</Price>
+  </DemoDetailRecord>
+  <DemoDetailRecord>
+    <OrderNo>1</OrderNo>
+    <ProductName>Product_2</ProductName>
+    <Quantity>2</Quantity>
+    <Price>2</Price>
+  </DemoDetailRecord>
+  <DemoDetailRecord>
+    <OrderNo>1</OrderNo>
+    <ProductName>Product_3</ProductName>
+    <Quantity>3</Quantity>
+    <Price>3</Price>
+  </DemoDetailRecord>
+  <DemoDetailRecord>
+    <OrderNo>2</OrderNo>
+    <ProductName>Product_0</ProductName>
+    <Quantity>0</Quantity>
+    <Price>1</Price>
+  </DemoDetailRecord>
+  <DemoDetailRecord>
+    <OrderNo>2</OrderNo>
+    <ProductName>Product_1</ProductName>
+    <Quantity>1</Quantity>
+    <Price>2</Price>
+  </DemoDetailRecord>
+  <DemoDetailRecord>
+    <OrderNo>2</OrderNo>
+    <ProductName>Product_2</ProductName>
+    <Quantity>2</Quantity>
+    <Price>3</Price>
+  </DemoDetailRecord>
+  <DemoDetailRecord>
+    <OrderNo>2</OrderNo>
+    <ProductName>Product_3</ProductName>
+    <Quantity>3</Quantity>
+    <Price>4</Price>
+  </DemoDetailRecord>
+  <DemoDetailRecord>
+    <OrderNo>3</OrderNo>
+    <ProductName>Product_0</ProductName>
+    <Quantity>0</Quantity>
+    <Price>2</Price>
+  </DemoDetailRecord>
+  <DemoDetailRecord>
+    <OrderNo>3</OrderNo>
+    <ProductName>Product_1</ProductName>
+    <Quantity>1</Quantity>
+    <Price>3</Price>
+  </DemoDetailRecord>
+  <DemoDetailRecord>
+    <OrderNo>3</OrderNo>
+    <ProductName>Product_2</ProductName>
+    <Quantity>2</Quantity>
+    <Price>4</Price>
+  </DemoDetailRecord>
+  <DemoDetailRecord>
+    <OrderNo>3</OrderNo>
+    <ProductName>Product_3</ProductName>
+    <Quantity>3</Quantity>
+    <Price>5</Price>
+  </DemoDetailRecord>
+</DemoCrystalReport>
