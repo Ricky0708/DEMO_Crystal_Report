@@ -30,6 +30,7 @@ namespace DEMO_CrystalReport.Views.Home
                 rpt.SetParameterValue("Companyname", "NorthWind Co.");
                 //show in report viewer
                 //CrystalReportViewer1.ReportSource = rpt;
+
                 //export to pdf file
                 rpt.ExportToHttpResponse(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, Response, false, "");
             }
