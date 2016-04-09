@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using CrystalDecisions.CrystalReports;
 using CrystalDecisions.CrystalReports.Engine;
-using CrystalDecisions.ReportSource;
 using System.Data;
 
 namespace DEMO_CrystalReport.Views.Home
@@ -31,7 +24,7 @@ namespace DEMO_CrystalReport.Views.Home
                 //show in report viewer
                 //CrystalReportViewer1.ReportSource = rpt;
 
-                //export to pdf file
+                //export to pdf file and download
                 rpt.ExportToHttpResponse(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, Response, false, "");
             }
         }
