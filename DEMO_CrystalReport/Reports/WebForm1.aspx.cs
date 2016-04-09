@@ -22,10 +22,10 @@ namespace DEMO_CrystalReport.Views.Home
                 rpt.SetDataSource(CreateDs());
                 rpt.SetParameterValue("Companyname", "NorthWind Co.");
                 //show in report viewer
-                //CrystalReportViewer1.ReportSource = rpt;
+                CrystalReportViewer1.ReportSource = rpt;
 
                 //export to pdf file and download
-                rpt.ExportToHttpResponse(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, Response, false, "");
+                //rpt.ExportToHttpResponse(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, Response, false, "");
             }
         }
         /// <summary>
