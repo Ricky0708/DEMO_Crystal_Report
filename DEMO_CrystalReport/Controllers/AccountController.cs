@@ -87,7 +87,7 @@ namespace WebApplication1.Controllers
                     return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "登入嘗試失試。44444");
+                    ModelState.AddModelError("", "登入嘗試失試。feature2");
                     return View(model);
             }
         }
