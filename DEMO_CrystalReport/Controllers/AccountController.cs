@@ -88,6 +88,7 @@ namespace WebApplication1.Controllers
                 case SignInStatus.Failure:
                 default:
                     ModelState.AddModelError("", "登入嘗試失試。feature2");
+                    ModelState.AddModelError("", "登入嘗試失試。feature1");
                     return View(model);
             }
         }
